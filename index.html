@@ -3,112 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Վահե Բաղդասարյան - Բանաստեղծություններ</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: linear-gradient(to bottom, #ffe5e5, #fca5a5);
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header, nav, footer {
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #333;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .poem {
-      margin-bottom: 2rem;
-    }
-    .poem-title {
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    textarea, input {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      background: #dc2626;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #b91c1c;
-    }
-  </style>
+  <title>Գլխավոր | Vahe Poetry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Վահե Բաղդասարյան - Բանաստեղծություններ</h1>
-    <p>Աղմկող լռության էջը</p>
+    <h1>Աղմկող Լռություն</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Գլխավոր</a></li>
+        <li><a href="all.html">Բոլոր գործերը</a></li>
+        <li><a href="poetry.html">Բանաստեղծություններ</a></li>
+        <li><a href="prose.html">Արձակ</a></li>
+        <li><a href="about.html">Իմ Մասին</a></li>
+        <li><a href="contact.html">Կապ</a></li>
+        <li><a href="shop.html">Խանութ</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav>
-    <a href="#">Գլխավոր</a>
-    <a href="#">Իմ մասին</a>
-    <a href="#">Կապ</a>
-    <a href="#">Խանութ</a>
-  </nav>
-
-  <div class="container">
-    <div id="poems">
-      <div class="poem">
-        <div class="poem-title">Աղմկող Լռություն</div>
-        <div>Լսիր լռության ձայնը — այն քեզ ավելի կասի...</div>
-      </div>
-    </div>
-
-    <h2>Ավելացնել նոր բանաստեղծություն</h2>
-    <div class="form-group">
-      <input type="text" id="title" placeholder="Վերնագիր">
-    </div>
-    <div class="form-group">
-      <textarea id="text" rows="4" placeholder="Բովանդակություն"></textarea>
-    </div>
-    <button onclick="addPoem()">Ավելացնել</button>
-  </div>
-
+  <main>
+    <section>
+      <h2>Բարի գալուստ</h2>
+      <p>Բարև Ձեզ, հարգելի ընթերցող, ես Վահեն եմ։ Այստեղ դու կգտնես քեզ հոգեհարազատ գործեր` ինչպես չափածո, այնպես էլ արձակ։ Մաղթում եմ հաջողություն։</p>
+    </section>
+  </main>
   <footer>
-    <p>© 2025 Վահե Բաղդասարյան</p>
+    <p>&copy; 2025 Վահե Բաղդասարյան</p>
   </footer>
-
-  <script>
-    function addPoem() {
-      const title = document.getElementById('title').value;
-      const text = document.getElementById('text').value;
-      if (!title || !text) return;
-      const poemDiv = document.createElement('div');
-      poemDiv.className = 'poem';
-      poemDiv.innerHTML = `<div class='poem-title'>${title}</div><div>${text.replace(/\n/g, '<br>')}</div>`;
-      document.getElementById('poems').appendChild(poemDiv);
-      document.getElementById('title').value = '';
-      document.getElementById('text').value = '';
-    }
-  </script>
 </body>
 </html>
